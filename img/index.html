@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Ficence Media: brand identities for small businesses who want their design to do more than look good.">
+<meta name="theme-color" content="#0A0A0A">
+<meta property="og:title" content="Ficence Media">
+<meta property="og:description" content="Brand identities for small businesses. Ideas to impact.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ficencemedia.github.io/">
+<meta property="og:image" content="https://ficencemedia.github.io/img/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ficence: Ideas to impact. Graphic design studio, South Wales">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ficencemedia.github.io/img/share.jpg">
+<link rel="icon" type="image/png" href="img/mark.png">
+<title>Ficence Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500&family=Space+Mono&display=swap">
+<style>
+  /* Layout: one measured column inside an orange hairline frame (crop marks), black ground first,
+     work as a stacked portfolio, the enquiry button repeated top and bottom.
+     Built to Ficence brand guidelines v1.0 — single dark look by design. */
+  :root {
+    --ink: #0A0A0A;        /* Ink Black */
+    --orange: #E0430F;     /* Signal Orange */
+    --paper: #F5F5F2;      /* Off-White */
+    --slate: #9A9A94;      /* Slate Grey */
+    --rule: #2A2A26;       /* Rule Grey */
+    --panel: #111110;
+    --f-head: "Archivo Black", "Arial Black", "Helvetica Neue", sans-serif;
+    --f-body: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+    --f-mono: "Space Mono", ui-monospace, Menlo, Consolas, monospace;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--ink); }
+  body {
+    background: var(--ink);
+    color: var(--paper);
+    font: 400 16px/1.55 var(--f-body);
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  a:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
+
+  /* the frame: thin orange lines like crop marks */
+  .frame {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto;
+    padding-inline: clamp(20px, 6vw, 56px);
+    padding-block: 40px 56px;
+  }
+  .frame::before, .frame::after {
+    content: ""; position: absolute; top: 0; bottom: 0; width: 1px; background: var(--orange); opacity: .9;
+  }
+  .frame::before { left: clamp(6px, 2vw, 16px); }
+  .frame::after { right: clamp(6px, 2vw, 16px); }
+  .hline { height: 1px; background: var(--orange); margin-inline: calc(-1 * clamp(20px, 6vw, 56px)); opacity: .9; }
+
+  .label {
+    font: 400 12px/1.4 var(--f-mono);
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin: 0;
+  }
+  .label.accent { color: var(--orange); }
+
+  header.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-block: 8px 28px; }
+  header.top img { height: 30px; width: auto; display: block; }
+
+  .hero { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; padding-block: 44px 8px; }
+  .hero > div { min-width: 0; }
+  h1 {
+    font: 400 clamp(46px, 11vw, 84px)/0.98 var(--f-head);
+    letter-spacing: -0.02em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .bar { width: 64px; height: 6px; background: var(--orange); margin-block: 24px 22px; }
+  .lede { font-size: clamp(17px, 2.4vw, 19px); color: var(--paper); max-width: 34ch; margin: 0; }
+  .hero .mark { width: clamp(64px, 12vw, 104px); height: auto; display: block; }
+
+  .ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    font: 500 16px/1 var(--f-body);
+    text-decoration: none;
+    padding: 16px 22px;
+    border: 1px solid var(--orange);
+    transition: background .15s ease, color .15s ease;
+  }
+  .btn.primary { background: var(--orange); color: var(--ink); }
+  .btn.primary:hover { background: var(--paper); border-color: var(--paper); }
+  .btn.ghost { color: var(--paper); border-color: var(--rule); }
+  .btn.ghost:hover { border-color: var(--paper); }
+  .btn .arrow { font-family: var(--f-mono); }
+
+  section { padding-block: 56px 0; }
+  .sec-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--rule); margin-bottom: 28px; }
+
+  /* testimonial */
+  .quote { margin: 0; }
+  .quote p.big {
+    font: 400 clamp(26px, 5vw, 38px)/1.12 var(--f-head);
+    letter-spacing: -0.01em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .quote p.rest { color: var(--slate); font-size: 18px; max-width: 52ch; margin: 18px 0 0; }
+  .quote figcaption { margin-top: 24px; display: grid; gap: 4px; }
+  .quote figcaption strong { font-weight: 500; font-size: 17px; }
+
+  /* work */
+  .work { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 20px; }
+  .item { display: grid; gap: 12px; align-content: start; min-width: 0; }
+  .item.wide { grid-column: 1 / -1; }
+  .shot { position: relative; overflow: hidden; background: var(--panel); border: 1px solid var(--rule); aspect-ratio: 1 / 1; max-width: 100%; }
+  .item.wide .shot { aspect-ratio: 3 / 2; }
+  .shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .shot.contain img { object-fit: contain; }
+  .meta { display: grid; gap: 4px; }
+  .meta h3 { font: 500 19px/1.25 var(--f-body); margin: 0; }
+  .meta p.note { color: var(--slate); margin: 0; font-size: 15px; }
+  .tag { display: inline-block; font: 400 11px/1 var(--f-mono); letter-spacing: .18em; text-transform: uppercase; color: var(--slate); }
+  .tag.client { color: var(--orange); }
+
+  /* featured client project */
+  .featured { display: grid; grid-template-columns: 1.5fr 1fr; gap: 24px; align-items: center; padding-bottom: 36px; margin-bottom: 36px; border-bottom: 1px solid var(--rule); }
+  .featured .shot { border-color: var(--rule); aspect-ratio: 3 / 2; }
+  .featured > div { min-width: 0; }
+  .featured h3 { font: 400 clamp(26px, 4.4vw, 34px)/1.05 var(--f-head); margin: 10px 0 12px; letter-spacing: -0.01em; }
+  .scope { list-style: none; padding: 0; margin: 16px 0 0; display: grid; }
+  .scope li { display: grid; grid-template-columns: 2.4em 1fr; padding-block: 9px; border-top: 1px solid var(--rule); font-size: 16px; }
+  .scope li:last-child { border-bottom: 1px solid var(--rule); }
+  .scope li span { font: 400 12px/1.9 var(--f-mono); color: var(--orange); }
+
+  /* K.E.Y.S process */
+  .keys { list-style: none; margin: 0; padding: 0; display: grid; }
+  .keys li { display: grid; grid-template-columns: 4.2rem 1fr; gap: 4px 20px; padding-block: 22px; border-top: 1px solid var(--rule); }
+  .keys li:last-child { border-bottom: 1px solid var(--rule); }
+  .keys .letter { font: 400 44px/1 var(--f-head); color: var(--orange); grid-row: span 3; }
+  .keys .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; min-width: 0; }
+  .keys h3 { font: 500 21px/1.2 var(--f-body); margin: 0; }
+  .keys p { margin: 0; color: var(--slate); max-width: 56ch; min-width: 0; }
+  .keys .steps { color: var(--paper); font-size: 15px; }
+  .keys-intro { color: var(--slate); max-width: 56ch; margin: 0 0 24px; }
+
+  .closing { padding-block: 64px 8px; }
+  .closing h2 { font: 400 clamp(32px, 7vw, 54px)/1.02 var(--f-head); margin: 0; letter-spacing: -0.02em; text-wrap: balance; }
+
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+  @media (max-width: 620px) {
+    .work { grid-template-columns: 1fr; }
+    .featured { grid-template-columns: 1fr; }
+    .hero { grid-template-columns: 1fr; }
+    .hero .mark { display: none; }
+    .item.wide .shot { aspect-ratio: 3 / 2; }
+    .keys li { grid-template-columns: 2.6rem 1fr; gap: 4px 14px; }
+    .keys .letter { font-size: 36px; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<div class="frame">
+  <div class="hline" aria-hidden="true"></div>
+
+  <header class="top">
+    <img src="img/wordmark.png" alt="ficence" width="230" height="50">
+    <p class="label">Graphic design studio</p>
+  </header>
+
+  <div class="hero">
+    <div>
+      <h1>Ideas to impact.</h1>
+      <div class="bar" aria-hidden="true"></div>
+      <p class="lede">Brand identities for small businesses who want their design to do more than look good.</p>
+      <div class="ctas">
+        <a class="btn primary" href="https://ficencemedia.github.io/inquiry_form/" target="_blank" rel="noopener">Start a project <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn ghost" href="https://www.instagram.com/ficence_media/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <img class="mark" src="img/mark.png" alt="" width="104" height="186">
+  </div>
+
+  <section aria-labelledby="review-h">
+    <div class="sec-head">
+      <p class="label accent" id="review-h">Client review</p>
+      <p class="label">Anna Music Teacher</p>
+    </div>
+    <figure class="quote">
+      <p class="big">“The finished result has gone beyond what I had envisaged.</p>
+      <p class="rest">The design feels professional, distinctive and, most importantly, reflects me and what I want my music teaching business to represent… I would have no hesitation in recommending you.”</p>
+      <figcaption>
+        <strong>Anna</strong>
+        <span class="label">Anna Music Teacher</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section aria-labelledby="work-h">
+    <div class="sec-head">
+      <p class="label accent" id="work-h">Selected work</p>
+      <p class="label">7 projects</p>
+    </div>
+
+    <article class="featured">
+      <div class="shot"><img src="img/anna.jpg" alt="Anna Music Teacher business cards, front and back, with the piano and violin character in red" loading="eager" width="1200" height="800"></div>
+      <div>
+        <span class="tag client">Client project</span>
+        <h3>Anna Music Teacher</h3>
+        <p class="note" style="color:var(--slate);margin:0">A warm, playful identity for a music teacher with almost 30 years' experience, built around one hand-drawn character.</p>
+        <ul class="scope">
+          <li><span>01</span>Logo and character</li>
+          <li><span>02</span>Business cards</li>
+          <li><span>03</span>Stationery</li>
+          <li><span>04</span>Launch poster and social posts</li>
+        </ul>
+      </div>
+    </article>
+
+    <div class="work">
+      <article class="item">
+        <div class="shot"><img src="img/morrow.jpg" alt="Morrow brand shown on a food delivery app screen with icons for hydration, focus and energy" loading="lazy" width="1080" height="1080"></div>
+        <div class="meta"><span class="tag">Concept project</span><h3>Morrow</h3><p class="note">Nutrition brand: logo, custom type, icon system and packaging.</p></div>
+      </article>
+      <article class="item">
+        <div class="shot"><img src="img/field-form.jpg" alt="Field &amp; Form membership poster with the monogram on a chalk bag and coffee cup" loading="lazy" width="1200" height="1200"></div>
+        <div class="meta"><span class="tag">Concept project</span><h3>Field &amp; Form</h3><p class="note">Climbing gym and café: monogram, print and merchandise.</p></div>
+      </article>
+
+      <article class="item wide">
+        <div class="shot"><img src="img/vertex.jpg" alt="Vertex Climbing Café coffee cups, coffee bags, food packaging and stickers" loading="lazy" width="1200" height="800"></div>
+        <div class="meta"><span class="tag">Concept project</span><h3>Vertex Climbing</h3><p class="note">Climbing centre and café: mark, colour system, packaging and stickers.</p></div>
+      </article>
+
+      <article class="item">
+        <div class="shot"><img src="img/common-house.jpg" alt="Common House signage: room sign, reception wall, class boards, lockers and wayfinding" loading="lazy" width="1200" height="1200"></div>
+        <div class="meta"><span class="tag">Concept project</span><h3>Common House</h3><p class="note">Movement and recovery club: logo and full wayfinding system.</p></div>
+      </article>
+      <article class="item">
+        <div class="shot"><img src="img/mixed-up.jpg" alt="Mixed Up Drinks Co. mojito can resting on ice" loading="lazy" width="800" height="1200" style="object-position:50% 45%"></div>
+        <div class="meta"><span class="tag">Brief from @thebriefbox</span><h3>Mixed Up Drinks Co.</h3><p class="note">Alcohol-free drinks: logo and can design.</p></div>
+      </article>
+
+      <article class="item wide">
+        <div class="shot contain" style="background:#7AC9C6"><img src="img/crumbs.jpg" alt="Crumbs bakery hand-lettered logo in white on teal, with the C wrapping around the word" loading="lazy" width="1080" height="1080"></div>
+        <div class="meta"><span class="tag">Concept project</span><h3>Crumbs</h3><p class="note">Bakery: hand-lettered logotype.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="keys-h">
+    <div class="sec-head">
+      <p class="label accent" id="keys-h">How I work · K.E.Y.S</p>
+      <p class="label">8 weeks</p>
+    </div>
+    <p class="keys-intro">Every brand project follows the same four stages, from our first call to final handover. I tailor the detail to your business.</p>
+    <ol class="keys">
+      <li>
+        <span class="letter" aria-hidden="true">K</span>
+        <div class="row"><h3>Knowledge</h3><span class="label">Week 1</span></div>
+        <p>A 2–3 hour kick-off call to understand your brand, audience and goals, plus a look at your competitors and gathering inspiration.</p>
+        <p class="steps">Initial planning</p>
+      </li>
+      <li>
+        <span class="letter" aria-hidden="true">E</span>
+        <div class="row"><h3>Exploration</h3><span class="label">Weeks 2–4</span></div>
+        <p>Two or three visual directions (mood boards, colour palettes, type) for you to choose from, then the core pieces, like your logo, designed in that direction.</p>
+        <p class="steps">Discovery and research · Design direction</p>
+      </li>
+      <li>
+        <span class="letter" aria-hidden="true">Y</span>
+        <div class="row"><h3>Yield</h3><span class="label">Weeks 4–6</span></div>
+        <p>You review the concepts and I revise until it feels right. Then I build out the full set: social templates, signage, launch assets, whatever's in scope.</p>
+        <p class="steps">Initial concepts · Final concepts</p>
+      </li>
+      <li>
+        <span class="letter" aria-hidden="true">S</span>
+        <div class="row"><h3>Succeed</h3><span class="label">Weeks 7–8</span></div>
+        <p>All your final files, guidelines on how to use them, and a short walkthrough so you're confident using the brand from day one.</p>
+        <p class="steps">Design handover</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="closing" aria-labelledby="close-h">
+    <h2 id="close-h">Tell us about your project and we'll come back with a plan.</h2>
+    <div class="bar" aria-hidden="true"></div>
+    <div class="ctas" style="margin-top:0">
+      <a class="btn primary" href="https://ficencemedia.github.io/inquiry_form/" target="_blank" rel="noopener">Start a project <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <p class="label">Ficence · Strategy meets design</p>
+    <p class="label">@ficence_media</p>
+  </footer>
+</div>
+</body>
+</html>
