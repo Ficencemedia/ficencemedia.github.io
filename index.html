@@ -3,20 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Ficence Media: brand identities for small businesses who want their design to do more than look good.">
+<title>Ficence Media · Brand designer for gyms &amp; fitness</title>
+<meta name="description" content="I'm Nathan, a brand designer for gyms, climbing walls, martial arts and boxing clubs, PTs and physios. Logos, signage, merch and social, built to get people through the door.">
 <meta name="theme-color" content="#0A0A0A">
-<meta property="og:title" content="Ficence Media">
-<meta property="og:description" content="Brand identities for small businesses. Ideas to impact.">
+<link rel="canonical" href="https://ficencemedia.github.io/">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Ficence Media">
 <meta property="og:url" content="https://ficencemedia.github.io/">
-<meta property="og:image" content="https://ficencemedia.github.io/img/share.jpg">
+<meta property="og:title" content="Ficence Media · Brands for gyms &amp; fitness">
+<meta property="og:description" content="Brand identities for gyms, climbing walls, martial arts clubs, PTs and physios. Ideas to impact.">
+<meta property="og:image" content="https://ficencemedia.github.io/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Ficence: Ideas to impact. Graphic design studio, South Wales">
+<meta property="og:image:alt" content="Ficence logo with the line: Brands for gyms and fitness.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://ficencemedia.github.io/img/share.jpg">
-<link rel="icon" type="image/png" href="img/mark.png">
-<title>Ficence Media</title>
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48.png">
+<link rel="icon" type="image/png" sizes="512x512" href="img/icon-512.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500&family=Space+Mono&display=swap">
@@ -125,6 +129,13 @@
   .item.wide .shot { aspect-ratio: 3 / 2; }
   .shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .shot.contain img { object-fit: contain; }
+  .work .item .duo .shot { aspect-ratio: 1 / 1; }
+  .work .item .duo .shot.tall { aspect-ratio: 4 / 5; }
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .duo > * { min-width: 0; }
+  .ba-tag { position: absolute; top: 12px; z-index: 1; font: 400 11px/1 var(--f-mono); letter-spacing: .16em; text-transform: uppercase; background: var(--ink); color: var(--paper); padding: 7px 9px; }
+  .ba-tag.after { background: var(--orange); color: var(--ink); }
+  @media (max-width: 620px) { .ba-tag { top: 8px; font-size: 9px; letter-spacing: .1em; padding: 5px 6px; } .ba-tag[style] { left: 8px !important; } .ba-tag.after[style] { left: calc(50% + 8px) !important; } }
   .meta { display: grid; gap: 4px; }
   .meta h3 { font: 500 19px/1.25 var(--f-body); margin: 0; }
   .meta p.note { color: var(--slate); margin: 0; font-size: 15px; }
@@ -132,8 +143,8 @@
   .tag.client { color: var(--orange); }
 
   /* featured client project */
-  .featured { display: grid; grid-template-columns: 1.5fr 1fr; gap: 24px; align-items: center; padding-bottom: 36px; margin-bottom: 36px; border-bottom: 1px solid var(--rule); }
-  .featured .shot { border-color: var(--rule); aspect-ratio: 3 / 2; }
+  .featured { display: grid; grid-template-columns: 1.1fr 1fr; gap: 24px; align-items: center; padding-bottom: 36px; margin-bottom: 36px; border-bottom: 1px solid var(--rule); }
+  .featured .shot { border-color: var(--rule); }
   .featured > div { min-width: 0; }
   .featured h3 { font: 400 clamp(26px, 4.4vw, 34px)/1.05 var(--f-head); margin: 10px 0 12px; letter-spacing: -0.01em; }
   .scope { list-style: none; padding: 0; margin: 16px 0 0; display: grid; }
@@ -157,7 +168,34 @@
 
   footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 
+  /* about */
+  .about { display: grid; gap: 18px; }
+  .about p { margin: 0; max-width: 58ch; }
+  .about p.muted { color: var(--slate); }
+  .facts { list-style: none; padding: 0; margin: 10px 0 0; display: grid; }
+  .facts li { display: grid; grid-template-columns: 2.4em 9em 1fr; gap: 0 8px; padding-block: 11px; border-top: 1px solid var(--rule); }
+  .facts li:last-child { border-bottom: 1px solid var(--rule); }
+  .facts li span:first-child { font: 400 12px/1.9 var(--f-mono); color: var(--orange); }
+  .facts li span.k { font: 400 12px/1.9 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--slate); }
+
+  /* who I work with */
+  .who { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 0; padding: 0; list-style: none; }
+  .who li { font: 400 12px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--paper); border: 1px solid var(--rule); padding: 9px 11px; }
+
+  /* contact */
+  .contact { list-style: none; padding: 0; margin: 28px 0 0; display: grid; }
+  .contact li { display: grid; grid-template-columns: 7.5em 1fr; gap: 12px; padding-block: 13px; border-top: 1px solid var(--rule); align-items: baseline; }
+  .contact li:last-child { border-bottom: 1px solid var(--rule); }
+  .contact a { text-decoration: none; font-size: 17px; overflow-wrap: anywhere; }
+  .contact a:hover { color: var(--orange); }
+
+  /* PREVIEW ONLY: unfilled details. Every .ph must be replaced or removed before going live. */
+  .ph { outline: 1px dashed var(--orange); outline-offset: 3px; color: var(--orange); }
+
   @media (max-width: 620px) {
+    .facts li { grid-template-columns: 2.4em 1fr; }
+    .facts li span:last-child { grid-column: 2; }
+    .contact li { grid-template-columns: 1fr; gap: 2px; }
     .work { grid-template-columns: 1fr; }
     .featured { grid-template-columns: 1fr; }
     .hero { grid-template-columns: 1fr; }
@@ -175,46 +213,97 @@
   <div class="hline" aria-hidden="true"></div>
 
   <header class="top">
-    <img src="img/wordmark.png" alt="ficence" width="230" height="50">
-    <p class="label">Graphic design studio</p>
+    <img src="img/wordmark.png" alt="ficence" width="138" height="30">
+    <p class="label">Brand designer · Gyms &amp; fitness</p>
   </header>
 
   <div class="hero">
     <div>
-      <h1>Ideas to impact.</h1>
+      <p class="label accent" style="margin-bottom:18px">Ideas to impact.</p>
+      <h1>Brands for gyms &amp; fitness.</h1>
       <div class="bar" aria-hidden="true"></div>
-      <p class="lede">Brand identities for small businesses who want their design to do more than look good.</p>
+      <p class="lede">I'm Nathan. I design brands for gyms, boxing and martial arts clubs and climbing walls that want to look as good as they train. Logos, signage, merch and socials, all from one clear idea.</p>
       <div class="ctas">
         <a class="btn primary" href="https://ficencemedia.github.io/inquiry_form/" target="_blank" rel="noopener">Start a project <span class="arrow" aria-hidden="true">→</span></a>
-        <a class="btn ghost" href="https://www.instagram.com/ficence_media/" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
       </div>
+      <ul class="who" aria-label="Who I work with">
+        <li>Gyms</li><li>Climbing walls</li><li>Martial arts &amp; boxing</li><li>Personal trainers</li><li>Physios</li><li>Active brands</li>
+      </ul>
     </div>
     <img class="mark" src="img/mark.png" alt="" width="104" height="186">
   </div>
 
-  <section aria-labelledby="review-h">
-    <div class="sec-head">
-      <p class="label accent" id="review-h">Client review</p>
-      <p class="label">Anna Music Teacher</p>
-    </div>
-    <figure class="quote">
-      <p class="big">“The finished result has gone beyond what I had envisaged.</p>
-      <p class="rest">The design feels professional, distinctive and, most importantly, reflects me and what I want my music teaching business to represent… I would have no hesitation in recommending you.”</p>
-      <figcaption>
-        <strong>Anna</strong>
-        <span class="label">Anna Music Teacher</span>
-      </figcaption>
-    </figure>
-  </section>
-
   <section aria-labelledby="work-h">
     <div class="sec-head">
-      <p class="label accent" id="work-h">Selected work</p>
-      <p class="label">7 projects</p>
+      <p class="label accent" id="work-h">Fitness work</p>
+      <p class="label">Boxing · Martial arts · Gyms · Climbing</p>
     </div>
 
     <article class="featured">
-      <div class="shot"><img src="img/anna.jpg" alt="Anna Music Teacher business cards, front and back, with the piano and violin character in red" loading="eager" width="1200" height="800"></div>
+      <div class="shot"><img src="img/kyokushin-badge.jpg" alt="Rhondda Kyokushin Karate badge: a colliery headframe and winding wheel with the Kyokushin kanji in the shaft, inside a red ring" loading="eager" width="1200" height="1200"></div>
+      <div>
+        <span class="tag client">Club project</span>
+        <h3>Rhondda Kyokushin</h3>
+        <p class="note" style="color:var(--slate);margin:0">A badge for a karate club back home in the Rhondda. The colliery headframe ties the club to the valleys, the Kyokushin kanji sits in the shaft, and the kanku becomes the O in RHONDDA. The full-detail badge is being embroidered.</p>
+        <ul class="scope">
+          <li><span>01</span>Club badge and lockup</li>
+          <li><span>02</span>Recruitment ad</li>
+          <li><span>03</span>Facebook cover</li>
+          <li><span>04</span>Wall and punchbag designs</li>
+        </ul>
+      </div>
+    </article>
+
+    <div class="work">
+      <article class="item wide">
+        <div class="duo">
+          <div class="shot tall"><img src="img/kyokushin-ad.jpg" alt="Rhondda Kyokushin recruitment ad: Forged in the Rhondda, with class times, prices and venue" loading="lazy" width="1080" height="1350"></div>
+          <div class="shot tall contain" style="background:#141414"><img src="img/kyokushin-wall.jpg" alt="Rhondda Kyokushin wall design with the headframe, kanji and the line Forged in the valleys" loading="lazy" width="1600" height="857"></div>
+        </div>
+      </article>
+
+      <article class="item wide">
+        <div class="shot contain ba" style="aspect-ratio:2040/1000;background:#fff"><span class="ba-tag" style="left:12px">Before</span><span class="ba-tag after" style="left:calc(50% + 12px)">After</span><img src="img/ember-before-after.jpg" alt="Ember Boxing Club before and after: a crest with gloves, flames and lightning, then a single black E made from a boxing ring corner post and ropes" loading="lazy" width="1600" height="784"></div>
+        <div class="duo">
+          <div class="shot"><img src="img/ember-poster.jpg" alt="Ember fight night poster pasted on a concrete wall" loading="lazy" width="1200" height="1200"></div>
+          <div class="shot"><img src="img/ember-hoodie.jpg" alt="Black Ember Boxing Club hoodie" loading="lazy" width="1200" height="1200"></div>
+        </div>
+        <div class="meta"><span class="tag">Concept · Fix This Logo 03</span><h3>Ember Boxing Club</h3><p class="note">The starting point was the typical boxing club logo, with crossed gloves, flames, lightning, a ribbon and three fonts. I swapped all of it for one E made from the corner of a ring: a post and three ropes. One colour, and it still reads as a profile picture.</p></div>
+      </article>
+
+      <article class="item wide">
+        <div class="duo">
+          <div class="shot tall"><img src="img/ironworks-case.jpg" alt="Ironworks case study: a clip-art gym crest beside the new IRONWORKS wordmark and IW monogram on a tee, membership card and app icon" loading="lazy" width="1080" height="1350"></div>
+          <div class="shot tall"><img src="img/ironworks-tee.jpg" alt="Ironworks strength and conditioning T-shirt worn in a gym" loading="lazy" width="800" height="1000"></div>
+        </div>
+        <div class="meta"><span class="tag">Concept · Fix This Logo 01</span><h3>Ironworks</h3><p class="note">A gym logo built from clip-art, rebuilt as one colour and one mark. The I is a steel beam, with an IW monogram that still works as a 40px app icon.</p></div>
+      </article>
+
+      <article class="item">
+        <div class="shot"><img src="img/field-form.jpg" alt="Field &amp; Form membership poster with the monogram on a chalk bag and coffee cup" loading="lazy" width="1200" height="1200"></div>
+        <div class="meta"><span class="tag">Concept project</span><h3>Field &amp; Form</h3><p class="note">Climbing gym and café: monogram, membership print and merchandise.</p></div>
+      </article>
+      <article class="item">
+        <div class="shot"><img src="img/common-house.jpg" alt="Common House signage: room sign, reception wall, class boards, lockers and wayfinding" loading="lazy" width="1200" height="1200"></div>
+        <div class="meta"><span class="tag">Concept project</span><h3>Common House</h3><p class="note">Movement and recovery club: logo and a full wayfinding system, from reception wall to lockers.</p></div>
+      </article>
+
+      <article class="item wide">
+        <div class="shot"><img src="img/vertex.jpg" alt="Vertex Climbing Café coffee cups, coffee bags, food packaging and stickers" loading="lazy" width="1200" height="800"></div>
+        <div class="meta"><span class="tag">Concept project</span><h3>Vertex Climbing</h3><p class="note">Climbing centre and café: mark, colour system, packaging and stickers.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="client-h">
+    <div class="sec-head">
+      <p class="label accent" id="client-h">Client review</p>
+      <p class="label">Anna Music Teacher</p>
+    </div>
+
+    <article class="featured">
+      <div class="shot"><img src="img/anna.jpg" alt="Anna Music Teacher launch poster with the piano and violin character, contact details and badges" loading="lazy" width="1200" height="1200"></div>
       <div>
         <span class="tag client">Client project</span>
         <h3>Anna Music Teacher</h3>
@@ -228,34 +317,53 @@
       </div>
     </article>
 
+    <figure class="quote">
+      <p class="big">“The finished result has gone beyond what I had envisaged.</p>
+      <p class="rest">The design feels professional, distinctive and, most importantly, reflects me and what I want my music teaching business to represent… I would have no hesitation in recommending you.”</p>
+      <figcaption>
+        <strong>Anna</strong>
+        <span class="label">Anna Music Teacher</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section aria-labelledby="other-h">
+    <div class="sec-head">
+      <p class="label accent" id="other-h">Other work</p>
+      <p class="label">Repair · Coffee · Nutrition</p>
+    </div>
     <div class="work">
+      <article class="item wide">
+        <div class="shot contain" style="aspect-ratio:2/1;background:#888"><img src="img/loopworks.jpg" alt="Loopworks Instagram carousel overview: logo where the double O is a chain link, job number system, intake card, campaign poster Don't replace it yet, and stickers" loading="lazy" width="1872" height="936"></div>
+        <div class="meta"><span class="tag">Concept project</span><h3>Loopworks</h3><p class="note">A repair workshop for bikes, appliances, furniture and clothes. The double O is a chain link, and the system runs from job numbers and repair statuses to an inspection stamp and one campaign line: Don't replace it yet.</p></div>
+      </article>
+      <article class="item">
+        <div class="shot"><img src="img/copperleaf-van.jpg" alt="Copperleaf Coffee van with the robin logo" loading="lazy" width="1200" height="1200"></div>
+        <div class="meta"><span class="tag">Concept · Fix This Logo 02</span><h3>Copperleaf Coffee</h3><p class="note">An AI-made logo of a cup, van, steam and seven leaves, replaced with a hand-drawn robin whose chest is a pressure gauge.</p></div>
+      </article>
       <article class="item">
         <div class="shot"><img src="img/morrow.jpg" alt="Morrow brand shown on a food delivery app screen with icons for hydration, focus and energy" loading="lazy" width="1080" height="1080"></div>
-        <div class="meta"><span class="tag">Concept project</span><h3>Morrow</h3><p class="note">Nutrition brand: logo, custom type, icon system and packaging.</p></div>
+        <div class="meta"><span class="tag">Concept project</span><h3>Morrow</h3><p class="note">Performance nutrition: logo, custom type, icon system and packaging.</p></div>
       </article>
-      <article class="item">
-        <div class="shot"><img src="img/field-form.jpg" alt="Field &amp; Form membership poster with the monogram on a chalk bag and coffee cup" loading="lazy" width="1200" height="1200"></div>
-        <div class="meta"><span class="tag">Concept project</span><h3>Field &amp; Form</h3><p class="note">Climbing gym and café: monogram, print and merchandise.</p></div>
-      </article>
+    </div>
+  </section>
 
-      <article class="item wide">
-        <div class="shot"><img src="img/vertex.jpg" alt="Vertex Climbing Café coffee cups, coffee bags, food packaging and stickers" loading="lazy" width="1200" height="800"></div>
-        <div class="meta"><span class="tag">Concept project</span><h3>Vertex Climbing</h3><p class="note">Climbing centre and café: mark, colour system, packaging and stickers.</p></div>
-      </article>
-
-      <article class="item">
-        <div class="shot"><img src="img/common-house.jpg" alt="Common House signage: room sign, reception wall, class boards, lockers and wayfinding" loading="lazy" width="1200" height="1200"></div>
-        <div class="meta"><span class="tag">Concept project</span><h3>Common House</h3><p class="note">Movement and recovery club: logo and full wayfinding system.</p></div>
-      </article>
-      <article class="item">
-        <div class="shot"><img src="img/mixed-up.jpg" alt="Mixed Up Drinks Co. mojito can resting on ice" loading="lazy" width="800" height="1200" style="object-position:50% 45%"></div>
-        <div class="meta"><span class="tag">Brief from @thebriefbox</span><h3>Mixed Up Drinks Co.</h3><p class="note">Alcohol-free drinks: logo and can design.</p></div>
-      </article>
-
-      <article class="item wide">
-        <div class="shot contain" style="background:#7AC9C6"><img src="img/crumbs.jpg" alt="Crumbs bakery hand-lettered logo in white on teal, with the C wrapping around the word" loading="lazy" width="1080" height="1080"></div>
-        <div class="meta"><span class="tag">Concept project</span><h3>Crumbs</h3><p class="note">Bakery: hand-lettered logotype.</p></div>
-      </article>
+  <section aria-labelledby="about-h">
+    <div class="sec-head">
+      <p class="label accent" id="about-h">About me</p>
+      <p class="label">Nathan · Ficence Media</p>
+    </div>
+    <div class="about">
+      <p class="quote"><span class="big" style="font:400 clamp(26px,5vw,38px)/1.12 var(--f-head);letter-spacing:-0.01em;display:block;text-wrap:balance">I train, I climb, and I design for the places that make that possible.</span></p>
+      <p>I grew up in a small valleys community in the Rhondda, and that shaped how I see brands: honest and down to earth, not overproduced or generic. It's why the badge I designed for Rhondda Kyokushin, a karate club back home, is built around a colliery headframe.</p>
+      <p>My day job is in the RAF. Discipline, planning and turning up when I say I will come with the territory, and I bring the same to every project. Outside of work you'll find me on a climbing wall or in the gym, which is why I design for them. I know what makes a space feel worth the membership.</p>
+      <p class="muted">I work with clients across South Wales and the rest of the UK, over video calls and messages, so where you're based doesn't slow anything down. I still take on other ambitious UK businesses too.</p>
+      <ul class="facts">
+        <li><span>01</span><span class="k">Day job</span><span>Royal Air Force</span></li>
+        <li><span>02</span><span class="k">Off duty</span><span>Climbing and strength training</span></li>
+        <li><span>03</span><span class="k">From</span><span>The Rhondda, South Wales</span></li>
+        <li><span>04</span><span class="k">Works</span><span>UK-wide, remotely</span></li>
+      </ul>
     </div>
   </section>
 
@@ -269,7 +377,7 @@
       <li>
         <span class="letter" aria-hidden="true">K</span>
         <div class="row"><h3>Knowledge</h3><span class="label">Week 1</span></div>
-        <p>A 2–3 hour kick-off call to understand your brand, audience and goals, plus a look at your competitors and gathering inspiration.</p>
+        <p>A 2–3 hour kick-off call to understand your gym, your members and your goals, plus a look at your competitors and gathering inspiration.</p>
         <p class="steps">Initial planning</p>
       </li>
       <li>
@@ -281,7 +389,7 @@
       <li>
         <span class="letter" aria-hidden="true">Y</span>
         <div class="row"><h3>Yield</h3><span class="label">Weeks 4–6</span></div>
-        <p>You review the concepts and I revise until it feels right. Then I build out the full set: social templates, signage, launch assets, whatever's in scope.</p>
+        <p>You review the concepts and I revise until it feels right. Then I build out the full set: social templates, signage, merch, launch assets, whatever's in scope.</p>
         <p class="steps">Initial concepts · Final concepts</p>
       </li>
       <li>
@@ -293,17 +401,25 @@
     </ol>
   </section>
 
-  <section class="closing" aria-labelledby="close-h">
-    <h2 id="close-h">Tell us about your project and we'll come back with a plan.</h2>
+  <section class="closing" id="contact" aria-labelledby="close-h">
+    <h2 id="close-h">Tell me about your gym and I'll come back with a plan.</h2>
     <div class="bar" aria-hidden="true"></div>
+    <p class="keys-intro">Every gym is different, so after a first chat I'll send you a quote for exactly what you need, whether that's a logo refresh or a full rebrand with signage and merch.</p>
     <div class="ctas" style="margin-top:0">
       <a class="btn primary" href="https://ficencemedia.github.io/inquiry_form/" target="_blank" rel="noopener">Start a project <span class="arrow" aria-hidden="true">→</span></a>
+      <a class="btn ghost" href="https://ig.me/m/ficence_media" target="_blank" rel="noopener">DM me “BRAND”</a>
     </div>
+    <ul class="contact">
+      <li><span class="label">Phone</span><a href="tel:+447309676253">07309 676253</a></li>
+      <li><span class="label">Email</span><a href="mailto:nathaniel.torresroberts04@gmail.com">nathaniel.torresroberts04@gmail.com</a></li>
+      <li><span class="label">Instagram</span><a href="https://www.instagram.com/ficence_media/" target="_blank" rel="noopener">@ficence_media</a></li>
+      <li><span class="label">Facebook</span><a href="https://www.facebook.com/share/1DUXACDogs/" target="_blank" rel="noopener">Ficence Media</a></li>
+    </ul>
   </section>
 
   <footer>
     <p class="label">Ficence · Strategy meets design</p>
-    <p class="label">@ficence_media</p>
+    <p class="label">© 2026 Ficence Media</p>
   </footer>
 </div>
 </body>
